@@ -1,0 +1,32 @@
+/* Globalt kode - bruges i alle filer */
+html {
+    background-color: #000;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #BBB;
+    opacity: 50;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #272b34;
+    opacity: 50;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #333;
+  }
+
+.global-wrapper {
+    width: 428px;
+    height: 120vh; //Højden kan altid blive større men ikke mindre (926px som default)
+    background: $background-gradient;
+    margin: 0 auto;
+    //overflow-y: scroll; //Tilføjer Scrollbar
+}
