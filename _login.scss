@@ -1,0 +1,44 @@
+﻿body
+{margin: auto;}
+
+.logo-login {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+}
+body p {
+    font-family: $font-text;
+    font-weight: 200;
+    color: white;
+    text-align: center;
+}
+
+.btn-login {
+    padding: 10px 24px;
+    border-radius: 50%;
+    background-color: #3CC3B1;
+    color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn-loginwith-apple {
+    padding: 10px 24px;
+    border-radius: 50%;
+    background-color: #000000;
+    color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn-loginwith-google {
+    padding: 10px 24px;
+    border-radius: 50%;
+    background-color: white;
+    color: #818181;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
