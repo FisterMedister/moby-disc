@@ -1,9 +1,27 @@
-﻿*
+﻿body
 {margin: auto;}
+
+body p{
+    color :white;
+    font-family:'PT Sans';
+    font-size:24px;
+}
 
 .btn-login {
     padding: 10px 24px;
     border-radius: 12px;
     background-color: #3CC3B1;
     color:white;
+}
+.btn-loginwith-apple {
+    padding: 10px 24px;
+    border-radius: 12px;
+    background-color: #3CC3B1;
+    color: white;
+}
+.btn-loginwith-google {
+    padding: 10px 24px;
+    border-radius: 12px;
+    background-color: #3CC3B1;
+    color: white;
 }
