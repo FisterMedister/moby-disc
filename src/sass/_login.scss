@@ -1,27 +1,44 @@
 ﻿body
 {margin: auto;}
 
-body p{
-    color :white;
-    font-family:'PT Sans';
-    font-size:24px;
+.logo-login {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+}
+body p {
+    font-family: $font-text;
+    font-weight: 200;
+    color: white;
+    text-align: center;
 }
 
 .btn-login {
     padding: 10px 24px;
-    border-radius: 12px;
+    border-radius: 50%;
     background-color: #3CC3B1;
-    color:white;
+    color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 .btn-loginwith-apple {
     padding: 10px 24px;
-    border-radius: 12px;
-    background-color: #3CC3B1;
+    border-radius: 50%;
+    background-color: #000000;
     color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 .btn-loginwith-google {
     padding: 10px 24px;
-    border-radius: 12px;
-    background-color: #3CC3B1;
-    color: white;
+    border-radius: 50%;
+    background-color: white;
+    color: #818181;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
