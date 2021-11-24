@@ -1,11 +1,13 @@
 ﻿
 
 @mixin btn-login ($colorBg, $colorFont) {
-    padding: 10px 24px;
-    border-radius: 50%;
+    padding: 10px 50px;
+    border-radius: 30px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top:10px;
+    border:none;
 
     background-color: $colorBg;
     color: $colorFont;
@@ -18,12 +20,16 @@ body
     display: block;
     margin-left: auto;
     margin-right: auto;
+    padding-top:50px;
+    padding-bottom:60px;
 }
 body p {
     font-family: $font-text;
     font-weight: 200;
     color: white;
     text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 
