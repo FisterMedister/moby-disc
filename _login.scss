@@ -1,12 +1,23 @@
-﻿body
+﻿
+
+@mixin btn-login ($colorBg, $colorFont) {
+    padding: 10px 24px;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: $colorBg;
+    color: $colorFont;
+}
+
+body
 {margin: auto;}
 
 .logo-login {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    
-    
 }
 body p {
     font-family: $font-text;
@@ -15,30 +26,13 @@ body p {
     text-align: center;
 }
 
+
 .btn-login {
-    padding: 10px 24px;
-    border-radius: 50%;
-    background-color: #3CC3B1;
-    color: white;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    @include btn-login(#3CC3B1, white); 
 }
 .btn-loginwith-apple {
-    padding: 10px 24px;
-    border-radius: 50%;
-    background-color: #000000;
-    color: white;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    @include btn-login(#000000, white);   
 }
 .btn-loginwith-google {
-    padding: 10px 24px;
-    border-radius: 50%;
-    background-color: white;
-    color: #818181;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    @include btn-login(white, #818181);
 }
