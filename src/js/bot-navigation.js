@@ -81,7 +81,7 @@ window.onload = function() {
     // Get the navbar
     navbar = document.getElementById("top-nav");
 
-    // When the user scrolls the page, execute myFunction
+    // When the user scrolls the page, execute stickyTopMenu
     window.onscroll = function() {stickyTopMenu()};
 }
 
