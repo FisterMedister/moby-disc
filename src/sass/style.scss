@@ -8,6 +8,12 @@ $font-text: 'PT Sans', sans-serif;
 $background-gradient: linear-gradient(190deg, rgba(255,255,255,1) 0%, rgba(124,74,155,1) 0%, rgba(122,53,105,1) 53%, rgba(50,31,57,1) 100%);
 $input: text-align center, border-radius 30px, border none, margin 10px, padding 10px;
 
+/*Colors*/ 
+$background-gradient: linear-gradient(190deg, rgba(255,255,255,1) 0%, rgba(124,74,155,1) 0%, rgba(122,53,105,1) 53%, rgba(50,31,57,1) 100%);
+$color-green: #3CC3B1; 
+$color-white: #ffffff;
+$color-black: #000000;
+$color-grey: #818181; 
 
 /* Importere andre scss filer her */
 @import '_reset.scss';
@@ -15,3 +21,4 @@ $input: text-align center, border-radius 30px, border none, margin 10px, padding
 @import '_login.scss';
 @import '_signup.scss';
 @import '_bundle.scss';
+@import '_nav-bottom.scss'
