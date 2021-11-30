@@ -25,7 +25,7 @@ html {
 
 .global-wrapper {
     width: 428px;
-    height: 120vh; //Højden kan altid blive større men ikke mindre (926px som default)
+    min-height: 120vh; //Højden kan altid blive større men ikke mindre (926px som default)
     background: $background-gradient;
     margin: 0 auto;
     //overflow-y: scroll; //Tilføjer Scrollbar

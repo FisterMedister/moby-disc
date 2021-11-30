@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>Moby Disc - Home</title>
+    <script src="src/js/bot-navigation.js"></script>
+</head>
+
+<body>
+    <div class="global-wrapper">
+
+<!-----------------------------LOGIN ----------------------------------------->
+                                      
+        <div id="main-login">
+            LOGIN
+            <span id="login-besked" class="hidden">Tillykke du er nu oprettet og kan logge ind</span>
+            <button id="btn-goto-main">LOGIN</button>
+            <button id="btn-goto-opret">OPRET</button>
+        </div>
+
+<!-----------------------------OPRET ----------------------------------------->
+                  
+        <div id="main-opret" class="hidden">
+            OPRET
+            <button id="btn-goto-login">LOGIN</button>
+            <button id="btn-opret">OPRET</button>
+        </div>
+
+<!-----------------------------MAIN CONTENT ----------------------------------------->
+                    
+        <div id="main-content" class="hidden">
+            <header>
+                <img src="src/img/Logo.png" class="logo-login" />
+                <h1 class="h1-bundles">Bundles</h1>
+                <p class="p-bundles">Moby Disc tilbyder nøje udvalgte vinyler som sælges i bundt</p>
+            </header>
+
+<!-----------------------------MAIN CONTENT: HOME ----------------------------------------->
+                        
+            <div id="content-home" class="">
+                HOME
+            </div>
+
+<!-----------------------------MAIN CONTENT: SHOP ----------------------------------------->
+                                    
+            <div id="content-shop" class="hidden">
+                <nav id="top-nav" class="top-nav-non-sticky">
+                    <ul class="bot-menu-list">
+                    <li id="btn-anbefalinger" class="bot-list-item-text bot-list-item-active">Anbefalinger til dig</li>
+                    <li id="btn-bundles" class="bot-list-item-text">Bundles</li>
+                    <li id="btn-genre" class="bot-list-item-text">Mine genre</li>
+                    </ul>
+                </nav>
+
+<!-----------------------------MAIN CONTENT: SHOP: ANBEFALINGER ----------------------------------------->
+                                        
+                <div id="content-shop-anbefalinger" class="">
+                    ANBEFALINGER
+                </div>
+
+<!-----------------------------MAIN CONTENT: SHOP: BUNDLES ----------------------------------------->
+                                               
+                <div id="content-shop-bundles" class="hidden">
+                    
+                    <section class="bundle1">
+                        <h2>Moby's top picks</h2>
+                        <button>Læg i kurv</button>
+                        <div class="bundle-container">
+                            <div>
+                                <p>Lorem Ipsum</p>
+                                <img src="" alt="">
+                                <button class="see-more">Se mere</button>
+                            </div>
+                            <div>
+                                <p>Lorem Ipsum</p>
+                                <img src="" alt="">
+                                <button class="see-more">Se mere</button>
+                            </div>
+                            <div>
+                                <p>Lorem Ipsum</p>
+                                <img src="" alt="">
+                                <button class="see-more">Se mere</button>
+                            </div>
+                        </div>
+                    </section> <!-- Bundle 1 -->
+
+                    <section class="bundle2">
+                        <h2>Populære</h2>
+                        <button>Læg i kurv</button>
+                        <div class="bundle-container">
+                            <div>
+                                <p>Lorem Ipsum</p>
+                                <img src="" alt="">
+                                <button class="see-more">Se mere</button>
+                            </div>
+                            <div>
+                                <p>Lorem Ipsum</p>
+                                <img src="" alt="">
+                                <button class="see-more">Se mere</button>
+                            </div>
+                            <div>
+                                <p>Lorem Ipsum</p>
+                                <img src="" alt="">
+                                <button class="see-more">Se mere</button>
+                            </div>
+                        </div>
+                    </section><!-- Bundle 2 -->
+
+                    <section class="bundle3">
+                        <h2>Vinyl-nørden</h2>
+                        <button>Læg i kurv</button>
+                        <div class="bundle-container">
+                            <div>
+                                <p>Lorem Ipsum</p>
+                                <img src="" alt="">
+                                <button class="see-more">Se mere</button>
+                            </div>
+                            <div>
+                                <p>Lorem Ipsum</p>
+                                <img src="" alt="">
+                                <button class="see-more">Se mere</button>
+                            </div>
+                            <div>
+                                <p>Lorem Ipsum</p>
+                                <img src="" alt="">
+                                <button class="see-more">Se mere</button>
+                            </div>
+                        </div>
+                    </section><!-- Bundle 3 -->
+
+                    <section class="bundle4">
+                        <h2>Til den nye samler</h2>
+                        <button>Læg i kurv</button>
+                        <div class="bundle-container">
+                            <div>
+                                <p>Lorem Ipsum</p>
+                                <img src="" alt="">
+                                <button class="see-more">Se mere</button>
+                            </div>
+                            <div>
+                                <p>Lorem Ipsum</p>
+                                <img src="" alt="">
+                                <button class="see-more">Se mere</button>
+                            </div>
+                            <div>
+                                <p>Lorem Ipsum</p>
+                                <img src="" alt="">
+                                <button class="see-more">Se mere</button>
+                            </div>
+                        </div>
+                    </section><!-- Bundle 4 -->
+
+                </div>
+
+<!-----------------------------MAIN CONTENT: SHOP: GENRE ----------------------------------------->
+                                               
+                <div id="content-shop-genre" class="hidden">
+                    GENRE
+                </div>
+            </div>
+
+<!-----------------------------MAIN CONTENT: PROFILE ----------------------------------------->
+                                           
+            <div id="content-profile" class="hidden">
+                PROFILE
+            </div>
+            <div class="bot-menu-spacer">
+                <!--Empty space-->   
+                &nbsp
+            </div>
+
+<!-----------------------------MAIN CONTENT: BOTTOM NAVIGATION ----------------------------------------->
+                                           
+            <footer>
+                <nav class="bot-nav">
+                    <ul class="bot-menu-list">
+                        <li id="btn-home" class="bot-list-item bot-list-item-active">
+                            <img class="bot-list-item-img" src="src/img/placeholder.svg">
+                        </li>
+                        <li id="btn-shop" class="bot-list-item-text">
+                            SHOP
+                        </li>
+                        <li id="btn-profile" class="bot-list-item">
+                            <img class="bot-list-item-img" src="src/img/placeholder.svg">
+                        </li>
+                    </ul>
+                </nav>
+            </footer>
+        </div>
+    </div>
+</body>
+
+
+</html>

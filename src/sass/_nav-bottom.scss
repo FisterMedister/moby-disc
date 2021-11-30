@@ -1,32 +1,43 @@
-* {
-    padding: 0px;
-    margin: 0px;
-    text-decoration: none;
-    list-style-type: none;
-    box-sizing: border-box;
+
+
+//header logo styling 
+.h1-bundles {
+    color: #fff;
+    font-family: $font-title;
+    text-align: center;
 }
 
-/* Importere Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap'); //Oswald
-@import url('https://fonts.googleapis.com/css2?family=Oswald&family=PT+Sans:wght@700&display=swap'); //PT Sans
+.p-bundles {
+    color: #fff;
+    font-family: $font-text;
+    text-align: center;
+    padding-top: 30px;
+}
 
-/* Variabler */
-$font-title: 'Oswald', sans-serif;
-$font-text: 'PT Sans', sans-serif;
+.logo-login {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top:50px;
+    padding-bottom:60px;
+}
 
-/*Colors*/ 
-$background-gradient: linear-gradient(190deg, rgba(255,255,255,1) 0%, rgba(124,74,155,1) 0%, rgba(122,53,105,1) 53%, rgba(50,31,57,1) 100%);
-$color-green: #3CC3B1; 
-$color-white: #ffffff;
-$color-black: #000000;
-$color-grey: #818181; 
-
-.global-wrapper {
+//top navigation
+#top-nav {
+    font-family: $font-title;
+    top: 0px;
     width: 428px;
-    height: 120vh; //Højden kan altid blive større men ikke mindre (926px som default)
-    background: $background-gradient;
-    margin: 0 auto;
-    //overflow-y: scroll; //Tilføjer Scrollbar
+    height: 7%;
+}
+
+.top-nav-non-sticky {
+    position: relative;
+    top: 0;
+}
+
+.top-nav-sticky {
+    position: fixed;
+    top: 0;
 }
 
 //menu item styling
@@ -56,6 +67,11 @@ $color-grey: #818181;
     bottom: 0px;
     width: 428px;
     height: 7%;
+}
+
+.bot-menu-spacer {
+    height: 7%;
+    position: absolute;
 }
 
 //flexer menu items
