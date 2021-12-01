@@ -1,0 +1,46 @@
+.grid-box1 {grid-area: medlem;}
+.grid-box2 {grid-area: anbefal;}
+.grid-box3 {grid-area: bundle-box;}
+.grid-box4 {grid-area: vinyl;}
+.grid-box5 {grid-area: forudbestil;}
+
+
+.front-page-container {
+    display: grid;
+    grid-template-areas: 
+    'medlem medlem medlem medlem medlem medlem'
+    'anbefal anbefal anbefal bundle-box bundle-box bundle-box'
+    'vinyl vinyl vinyl forudbestil forudbestil forudbestil';
+    grid-gap: 10px;
+    //background-color: deeppink;
+    height: 40vh;
+    padding: 10px;
+
+
+
+    .grid-box1, .grid-box2, .grid-box3, .grid-box4, .grid-box5 {
+        background-color: #FFF;
+        padding: 10px;
+        text-align: center;
+        border-radius: 20px;
+
+        h2 {
+            margin-top: 30px;
+            font-family: $font-title;
+        }
+    }
+}
+
+.personlige {
+    width: 60%;
+    height: 12vh;
+    background-color: #FFF;
+    margin: 0 auto;
+    border-radius: 20px;
+    text-align: center;
+
+    h2 {
+        padding-top: 15px;
+        font-family: $font-title;
+    }
+}
