@@ -1,0 +1,62 @@
+﻿
+
+.item-title {
+    color: #ffffff;
+    font-family: $font-title;
+    text-align: center;
+}
+.item-cover {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.thumps-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.trump-down {
+    transform: rotate(180deg);
+}
+
+.minus-btn {
+    width: 20px;
+    height: 20px;
+    color: white;
+    border: none;
+    background-color: firebrick;
+}
+.counter {
+    width: 80px;
+    height: 20px;
+    text-align:center;
+}
+.plus-btn {
+    width: 20px;
+    height: 20px;
+    color: white;
+    border: none;
+    background-color: limegreen;
+}
+
+.cart {
+    background-color: #3CC3B1;
+    border: none;
+    color: white;
+    font-family: $font-text;
+    width:120px;
+}
+.Track-list{
+    padding-top:10px;
+}
+.item-container {
+    padding: 10px;
+    width: 50%;
+    float: left;
+}
+
+.item-container p {
+    color: #fff;
+    font-family: $font-text;
+}
