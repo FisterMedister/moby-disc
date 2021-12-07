@@ -1,0 +1,43 @@
+.buyRec  {
+    display: flex;
+    justify-content: center;
+    padding: 10px 50px;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:10px;
+    border:none;
+    background-color: $color-green;
+    color: $color-white;
+    width: 50%;
+   
+}
+
+.small {
+    width: 15%;
+    margin-left: 20%;
+}
+
+.medium {
+    margin-top: 10%;
+    margin-left:25%;
+    width: 50%;
+}
+
+@mixin overskrifter {
+    color: #fff;
+    font-family: $font-text;
+    text-align: center;
+}
+
+.centerCon {
+    h4 {
+        @include overskrifter();
+    }
+}
+
+
+       
+
+
+

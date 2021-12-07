@@ -1,5 +1,5 @@
 //globale variabler oprettes i window.onload og skal kunne tilgås i stickyTopMenu
-var navbar, sticky;
+var navbar, sticky, record;
 
 //når den er færdig med at oprette DOM køres dette stykke kode, fordi ellers kan dene ikke fange dem
 //for det er ikke oprettet endnu
@@ -20,7 +20,7 @@ window.onload = function() {
         document.getElementById('main-opret').classList.remove('hidden');
     }
 
-    //fjerner opretm får en tilbage til login
+    //fjerner opret får en tilbage til login
     document.getElementById('btn-goto-login').onclick=function() {
         document.getElementById('main-opret').classList.add('hidden');
         document.getElementById('main-login').classList.remove('hidden');
@@ -45,6 +45,7 @@ window.onload = function() {
     document.getElementById('btn-shop').onclick=function() {
         setActive(this);
         getMenuContent("content-shop");
+        populateAnbefalinger();
 
         // Get the offset position of the navbar
         sticky = navbar.offsetTop;
@@ -76,6 +77,57 @@ window.onload = function() {
         getTopMenuContent("content-shop-genre");
     }
 
+    /*------------------------Mine Genre side - marker knapper-------------------------------------------------*/
+    
+    document.getElementById('klas').onclick=function(){
+        this.classList.toggle("selected");
+    }
+
+    document.getElementById('hip').onclick=function(){
+        this.classList.toggle("selected");
+    }  
+
+    document.getElementById('count').onclick=function(){
+        this.classList.toggle("selected");
+    }  
+
+    document.getElementById('rock').onclick=function(){
+        this.classList.toggle("selected");
+    }  
+
+    document.getElementById('rap').onclick=function(){
+        this.classList.toggle("selected");
+    }  
+
+    document.getElementById('blues').onclick=function(){
+        this.classList.toggle("selected");
+    }  
+
+    document.getElementById('k-pop').onclick=function(){
+        this.classList.toggle("selected");
+    }  
+
+    document.getElementById('ind').onclick=function(){
+        this.classList.toggle("selected");
+    }  
+
+    document.getElementById('metal').onclick=function(){
+        this.classList.toggle("selected");
+    }
+ 
+    document.getElementById('heavy').onclick=function(){
+        this.classList.toggle("selected");
+    }
+      
+    document.getElementById('pop').onclick=function(){
+        this.classList.toggle("selected");
+    }
+      
+    document.getElementById('rega').onclick=function(){
+        this.classList.toggle("selected");
+    }
+     
+
 /*------------------------MAIN-CONTENT:SHOP: TOP MENU: HANDLES ON SCROLL(STICKY)-------------------------------------------------*/
 
     // Get the navbar
@@ -87,6 +139,15 @@ window.onload = function() {
 
 //denne funktion generere og indsætter dummy data, så der kan scrolles når der trykkes på anbefalinger
 function populateAnbefalinger() {
+
+    //dummy data - her kommer vi til at hente data fra databasen i stedet for 
+    records = [
+        ['src/img/placeholder.svg','Kunstner','Titel','Genre','Pris'],
+        ['src/img/placeholder.svg','Liv Krogshede','Lad os Skændes','Pop','20000kr'],
+        ['src/img/placeholder.svg','ABBA','Voyage','Pop','199kr'],
+        ['src/img/placeholder.svg','Amy Winehouse','Back to Black','Jazz','155kr']
+    ];
+
     //finder en div via ID (content-shop-anbefalinger)
     divAnbefalinger = document.getElementById('content-shop-anbefalinger');
     //rydder alt indhold i div (content-shop-anbefalinger)
@@ -95,14 +156,39 @@ function populateAnbefalinger() {
     //opretter en ny variable til HTML indhold - e.g. returned record set from DB
     anbefalingerContent = ""; 
 
-    //i er 0, så længe i er mindre end 100, lægges 1 til i
-    for(i=0; i<100; i++) {
-        //tilføjer (string "ANBEFALING" + i + et <br/> line break) til variablen(anbefalingerContent)
-        anbefalingerContent += "ANBEFALING: " + i + "<br/>"; //Add record from DB
+    //i er 0, så længe i er mindre end længden på arrayet (records), så læg en til
+    for(i=0; i< records.length; i++) {
+        //opbygger html indhold basseret på dummy data array
+        anbefalingerContent += 
+            '<div class="centerCon">' +
+            '<input onclick="viewRecord('+i+')" class="medium" type="image" src="'+records[i][0]+'" />' +
+                '<span class="titelRec"><h4>'+records[i][1]+' - '+records[i][2]+'<h4></span>'+
+                '<span class="titelGenre"><h4>Genre: '+records[i][3]+'</h4></span>'+
+                '<button onclick="addRecord('+i+')" class="buyRec">' +
+                    '<span class="priceTag">Køb: '+records[i][4]+'</span>' +
+                    '<img class="small" src="src/img/placeholder.svg">' + 
+                '</button>' +
+            '</div>';
     }
 
     //indsætter indholdet af variablen (anbefalingerContent) i div (content-shop-anbefalinger)
     divAnbefalinger.innerHTML += anbefalingerContent;
+}
+
+function addRecord(albumID) {
+    console.log(albumID);
+}
+
+
+function viewRecord(albumID) {
+    console.log(albumID);
+    //viser content fra Mere om Pladen
+    getTopMenuContent("content-shop-anbefalinger-viewRecord");
+    //henter data fra array og sætter ind på plads
+    document.getElementById("kunstnerTitel").innerHTML=records[albumID][1]+ " " + records[albumID][2];
+    document.getElementById("addGenre").innerHTML="Genre: " + records[albumID][3];
+    document.getElementById("addImg").innerHTML='<img class="medium" src="' + records[albumID][0] +'">';
+    document.getElementById("addPris").innerHTML="Pris: " + records[albumID][4];
 }
 
 /*------------------------MAIN-CONTENT: BOTTOM MENU: SUPPORT FUNKTIONS-------------------------------------------------*/
@@ -140,6 +226,7 @@ function getTopMenuContent(menuContent) {
     document.getElementById("content-shop-anbefalinger").classList.add("hidden");
     document.getElementById("content-shop-bundles").classList.add("hidden");
     document.getElementById("content-shop-genre").classList.add("hidden");
+    document.getElementById("content-shop-anbefalinger-viewRecord").classList.add("hidden");
     document.getElementById(menuContent).classList.remove("hidden");
 }
 

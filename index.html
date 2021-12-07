@@ -15,18 +15,31 @@
 <!-----------------------------LOGIN ----------------------------------------->
                                       
         <div id="main-login">
-            LOGIN
+            <img src="src/img/logo.png" class="logo-login" />
             <span id="login-besked" class="hidden">Tillykke du er nu oprettet og kan logge ind</span>
-            <button id="btn-goto-main">LOGIN</button>
-            <button id="btn-goto-opret">OPRET</button>
+            <button class="btn-login" id="btn-goto-main">Log Ind</button>
+            <button class="btn-login" id="btn-goto-opret">Opret Bruger</button>
+            <p id="or">Eller</p>
+            <button class="btn-loginwith-apple"><img src="src/img/apple-16.png"/>Sign up with apple</button>
+            <button class="btn-loginwith-google"><img src="src/img/google-16.png" />Sign up with google</button>
         </div>
 
 <!-----------------------------OPRET ----------------------------------------->
                   
         <div id="main-opret" class="hidden">
-            OPRET
-            <button id="btn-goto-login">LOGIN</button>
-            <button id="btn-opret">OPRET</button>
+            <img src="src/img/Logo.png" class="logo-login" alt="Logo">
+            <h1 class="h1-signup">Velkommen til Moby Disc</h1>
+            <div class="signup-wrapper">
+                <p class="p-signup">Indtast venligst dine oplysninger. Felter markeret med * skal udfyldes</p>
+                <input type="text" placeholder="Navn*" class="opret-input" />
+                <input type="text" placeholder="Efternavn*" class="opret-input" />
+                <input type="text" placeholder="Adresse*" class="opret-input" />
+                <input type="text" placeholder="Postnummer*" class="opret-input" />
+                <input type="text" placeholder="Brugernavn*" class="opret-input" />
+                <input type="password" placeholder="Adgangskode*" class="opret-input" />
+            </div>
+            <button class="btn-login" id="btn-goto-login">Log Ind</button>
+            <button class="btn-login" id="btn-opret">Opret Bruger</button>
         </div>
 
 <!-----------------------------MAIN CONTENT ----------------------------------------->
@@ -34,14 +47,36 @@
         <div id="main-content" class="hidden">
             <header>
                 <img src="src/img/Logo.png" class="logo-login" />
-                <h1 class="h1-bundles">Bundles</h1>
-                <p class="p-bundles">Moby Disc tilbyder nøje udvalgte vinyler som sælges i bundt</p>
+                
             </header>
 
 <!-----------------------------MAIN CONTENT: HOME ----------------------------------------->
                         
             <div id="content-home" class="">
-                HOME
+                <h1 class="h1-bundles">Velkommen til Moby Disc! 
+                    <br>Optjen point ved at shoppe, og anbefale plader</h1>
+        
+                <div class="front-page-container">
+                    <div class="grid-box1">
+                        <h2>Medlem</h2>
+                    </div>
+                    <div class="grid-box2">
+                        <h2>Anbefalet til dig</h2>
+                    </div>
+                    <div class="grid-box3">
+                        <h2>Bundles</h2>
+                    </div>
+                    <div class="grid-box4">
+                        <h2>Vinyl</h2>
+                    </div>
+                    <div class="grid-box5">
+                        <h2>Forudbestil</h2>
+                    </div>
+                </div>
+        
+                <div class="personlige">
+                    <h2>Personlige oplysninger/indstillinger</h2>
+                </div>        
             </div>
 
 <!-----------------------------MAIN CONTENT: SHOP ----------------------------------------->
@@ -58,7 +93,56 @@
 <!-----------------------------MAIN CONTENT: SHOP: ANBEFALINGER ----------------------------------------->
                                         
                 <div id="content-shop-anbefalinger" class="">
-                    ANBEFALINGER
+                </div>
+
+<!-----------------------------MAIN CONTENT: SHOP: ANBEFALINGER: MERE OM PLADEN ----------------------------------------->
+                <div class="hidden" id="content-shop-anbefalinger-viewRecord">
+                    <h1 id="kunstnerTitel" class="item-title">Album titel og kunstner</h1>
+                    <div id="addImg">
+                    <img src="src/img/itemplaceholder.png" class="item-cover" />
+                </div>
+                    <div class="thumps-container">
+                        <img src="src/img/thumpsplaceholder.png" onclick=toogle(this) class="thumps" />
+                    </div>
+                    <div class="item-container">
+                        <p>NU. PR. STK</p>
+                        <button class="minus-btn" onclick="minus()">-</button>
+                        <input class="counter" id="cart" placeholder="0"/>
+                        <button class="plus-btn" onclick="plus()">+</button>
+                        <p class="Track-list">
+                            <b>Track list</b>
+                            <br />
+                            1 Sunday Morning 2:56
+                            <br />
+                            2 I'm Waiting For The Man 4:39
+                            <br />
+                            3 Femme Fatale 2:38
+                            <br />
+                            4 Venus In Furs 5:12
+                            <br />
+                            5 Run Run Run 4:22
+            
+                        </p>
+                    </div>
+                    <div class="item-container">
+                        <button class="cart">Læg i kurv</button>
+                        <p>Album info:</p>
+                        <br />
+                        <p></p>
+                        <p>Udgivet:</p>
+                        <br />
+                        <p></p>
+                        <p>Varenumer:</p>
+                        <br />
+                        <p></p>
+                        <p id="addGenre">Genre:</p>
+                        <br />
+                        <p></p>
+                        <p id="addPris">Pris:</p>
+                        <br />
+                        <p></p>
+            
+                    </div>
                 </div>
 
 <!-----------------------------MAIN CONTENT: SHOP: BUNDLES ----------------------------------------->
@@ -158,7 +242,31 @@
 <!-----------------------------MAIN CONTENT: SHOP: GENRE ----------------------------------------->
                                                
                 <div id="content-shop-genre" class="hidden">
-                    GENRE
+                
+
+                    <p class="genrer-text">Vælg dine yndlingsgernrer
+                    Psst. Du kan altid ændre disse senere</p>
+                    
+                    
+                    <div class="grid-genrer-container">
+                        <div id="klas" class="grid-item"><p>Klassisk</p></div>
+                        <div id="hip" class="grid-item"><p>Hip-Hop</p></div>
+                        <div id="count" class="grid-item"><p>Country</p></div>
+                        <div id="rock" class="grid-item"><p>Rock</p></div>
+                        <div id="rap" class="grid-item"><p>Rap</p></div>
+                        <div id="blues" class="grid-item"><p>Blues</p></div>
+                        <div id="k-pop" class="grid-item"><p>K-pop</p></div>
+                        <div id="ind" class="grid-item"><p>Indie</p></div>
+                        <div id="metal" class="grid-item"><p>Metal</p></div>
+                        <div id="heavy" class="grid-item"><p>Heavy Metal</p></div>
+                        <div id="pop" class="grid-item"><p>Pop</p></div>
+                        <div id="rega" class="grid-item"><p>Reggae</p></div>
+                    
+                    
+                    <!-- evt javascript så man kan trykke på flere genrer så den markerer de farvede - afventer -->
+                    
+                    
+                    </div>
                 </div>
             </div>
 
