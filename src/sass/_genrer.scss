@@ -1,0 +1,61 @@
+
+.grid-genrer-container {
+display: grid;
+grid-template-columns: auto auto;
+grid-gap: 25px;
+margin-left: 75px;
+margin-right: auto;
+padding-top: 70px;
+     }
+
+.grid-item {
+width: 125px;
+height: 30px;
+background-color: white;
+text-align: center;
+border-radius: 25px;
+color: black;
+   }
+
+.grid-item > p {
+font-family: $font-text;
+margin-top: 4px;
+
+  }
+
+.grid-item:active {
+background-color: #3CC3B1;
+color: white;
+
+}
+
+
+.grid-item:focus {
+background-color: #3CC3B1;
+color: white;
+
+}
+
+.grid-item:visited {
+background-color: #3CC3B1;
+color: white;
+
+}
+
+
+
+.genrer-text {
+margin-top: 50px;
+font-family: $font-text;
+color: white;
+text-align: center;
+  }
+
+
+.logosmall {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top:50px;
+
+  }
