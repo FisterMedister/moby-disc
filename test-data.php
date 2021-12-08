@@ -10,6 +10,8 @@
         $husnr = $_POST['husnr'];
         //$postnummer = $_POST['postnummer'];
        
+        //redirect
+        header("Location:http://localhost/moby-disc/");
 
         //database details. You have created these details in the third step. Use your own.
         $server="localhost";
