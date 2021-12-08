@@ -163,22 +163,41 @@
                             4 Venus In Furs 5:12
                             <br />
                             5 Run Run Run 4:22
-            
+                            <br />
+                            1 Sunday Morning 2:56
+                            <br />
+                            2 I'm Waiting For The Man 4:39
+                            <br />
+                            3 Femme Fatale 2:38
+                            <br />
+                            4 Venus In Furs 5:12
+                            <br />
+                            5 Run Run Run 4:22
+                            <br />
+                            3 Femme Fatale 2:38
+                            <br />
+                            4 Venus In Furs 5:12
+                            <br />
+                            5 Run Run Run 4:22
                         </p>
+                        <div class="bot-menu-spacer">
+                            <!--Empty space-->   
+                            &nbsp
+                        </div>
                     </div>
-                    <div class="item-container">
-                        <button class="cart">Læg i kurv</button>
-                        <p>Album info:</p>
-                       
-                        <p>Udgivet:</p>
+                        <div class="item-container">
+                            <button class="cart">Læg i kurv</button>
+                            <p>Album info:</p>
                         
-                        <p>Varenumer:</p>
-                        
-                        <p id="addGenre">Genre:</p>
-                        
-                        <p id="addPris">Pris:</p>
-                    </div>
-                    <div class="bot-menu-spacer">
+                            <p>Udgivet:</p>
+                            
+                            <p>Varenumer:</p>
+                            
+                            <p id="addGenre">Genre:</p>
+                            
+                            <p id="addPris">Pris:</p>
+                        </div>
+                        <div class="bot-menu-spacer">
                             <!--Empty space-->   
                             &nbsp
                         </div>
