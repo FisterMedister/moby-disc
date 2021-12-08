@@ -141,6 +141,7 @@ window.onload = function() {
 function populateAnbefalinger() {
 
     //dummy data - her kommer vi til at hente data fra databasen i stedet for 
+   
     records = [
         ['src/img/placeholder.svg','Kunstner','Titel','Genre','Pris'],
         ['src/img/placeholder.svg','Liv Krogshede','Lad os Skændes','Pop','20000kr'],
