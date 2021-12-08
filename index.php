@@ -38,7 +38,7 @@
         <input type="text" name="husnr" placeholder="Hus nr.*" class="opret-input" />
         <!--<input type="text" name="postnummer" placeholder="Postnummer*" class="opret-input" />-->
         <input type="password" name="adgangskode" placeholder="Adgangskode*" class="opret-input" />
-        <input class="btn-login" type="submit" name="submit" value="Opret"/>
+        <input class="btn-login" id="btn-opret" type="submit" name="submit" value="Opret"/>
     </form>
     <button class="btn-login" id="btn-goto-login">Log Ind</button>
         </div>
