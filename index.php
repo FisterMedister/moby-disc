@@ -83,9 +83,14 @@
 <?php
      //set up variables
     //vi peger på porten fordi den er ændret vigtigt!! 
-    $server="localhost:3307";
+    /*$server="localhost:3307";
     $user="Liv";
     $pw="1234";
+    $db="moby_disc_records";*/
+
+    $server="localhost";
+    $user="root";
+    $pw="";
     $db="moby_disc_records";
 
     //create connection
