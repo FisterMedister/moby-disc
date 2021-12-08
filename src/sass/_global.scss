@@ -1,6 +1,7 @@
 /* Globalt kode - bruges i alle filer */
 html {
-    background-color: #000;
+    //background-color: #000;
+    background: $background-gradient;
 }
 
 ::-webkit-scrollbar {

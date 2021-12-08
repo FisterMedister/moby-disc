@@ -98,8 +98,7 @@
 
       
       //echo "Connected succesfully";
-      $sql = "SELECT album_title FROM album WHERE id = '".$q."'"; 
-      $result = $conn->query($sql); 
+    
       
      /* $sql = "SELECT fornavn FROM users";
       $result = $conn->query($sql);
@@ -179,7 +178,10 @@
                         <p id="addPris">Pris:</p>
                         <br />
                         <p></p>
-            
+                        <div class="bot-menu-spacer">
+                            <!--Empty space-->   
+                            &nbsp
+                        </div>
                     </div>
                 </div>
 
