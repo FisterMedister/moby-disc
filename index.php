@@ -83,15 +83,15 @@
 <?php
      //set up variables
     //vi peger på porten fordi den er ændret vigtigt!! 
-    /*$server="localhost:3307";
+    $server="localhost:3307";
     $user="Liv";
     $pw="1234";
-    $db="moby_disc_records";*/
+    $db="moby_disc_records";
 
-    $server="localhost";
+    /*$server="localhost";
     $user="root";
     $pw="";
-    $db="moby_disc_records";
+    $db="moby_disc_records";*/
 
     //create connection
     $conn=new mysqli($server,$user,$pw,$db);
@@ -169,25 +169,19 @@
                     <div class="item-container">
                         <button class="cart">Læg i kurv</button>
                         <p>Album info:</p>
-                        <br />
-                        <p></p>
+                       
                         <p>Udgivet:</p>
-                        <br />
-                        <p></p>
+                        
                         <p>Varenumer:</p>
-                        <br />
-                        <p></p>
+                        
                         <p id="addGenre">Genre:</p>
-                        <br />
-                        <p></p>
+                        
                         <p id="addPris">Pris:</p>
-                        <br />
-                        <p></p>
-                        <div class="bot-menu-spacer">
+                    </div>
+                    <div class="bot-menu-spacer">
                             <!--Empty space-->   
                             &nbsp
                         </div>
-                    </div>
                 </div>
 
 <!-----------------------------MAIN CONTENT: SHOP: BUNDLES ----------------------------------------->
