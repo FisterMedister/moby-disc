@@ -53,10 +53,15 @@
 .item-container {
     margin: 10px;
     width: 50%;
-    float: left;
+    //float: left;
 }
 
 .item-container p {
     color: #fff;
     font-family: $font-text;
+}
+
+.item-grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
 }

@@ -146,6 +146,7 @@
                     <div class="thumps-container">
                         <img src="src/img/thumpsplaceholder.png" onclick=toogle(this) class="thumps" />
                     </div>
+                <div class="item-grid-container"> 
                     <div class="item-container">
                         <p>NU. PR. STK</p>
                         <button class="minus-btn" onclick="minus()">-</button>
@@ -201,6 +202,7 @@
                             <!--Empty space-->   
                             &nbsp
                         </div>
+                    </div>  
                 </div>
 
 <!-----------------------------MAIN CONTENT: SHOP: BUNDLES ----------------------------------------->
