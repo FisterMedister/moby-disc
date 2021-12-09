@@ -8,6 +8,38 @@
 
 .reward-title {
     img {
-        
+        width: 50px;
+        height: 23px;
+        margin-left: 44%;
+        margin-top: 1em;
+    }
+}
+
+.grid-star1 {grid-area: star1;}
+.grid-star2 {grid-area: star2;}
+.grid-star3 {grid-area: star3;}
+.grid-star4 {grid-area: star4;}
+.grid-star5 {grid-area: star5;}
+.grid-star6 {grid-area: star6;}
+.grid-progress {grid-area: progres;}
+
+.progress-grid {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas:
+    'star1 star2 star3 star4 star5 star6'
+    'progres';
+
+    padding: 10px;
+
+
+    .grid-star1, .grid-star2, .grid-star3, .grid-star4, .grid-star5, .grid-star6 {
+        height: 20px;
+        width: 27px;
+        background-color: yellow;
+    }
+
+    .grid-progress {
+
     }
 }

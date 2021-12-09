@@ -28,8 +28,8 @@ window.onload = function() {
     //opretter bruger, får en tilbage så man kan logge ind 
     document.getElementById('btn-opret').onclick=function() {
         document.getElementById('main-opret').classList.add('hidden');
-        document.getElementById('login-besked').classList.remove('hidden');
         document.getElementById('main-login').classList.remove('hidden');
+        document.getElementById('login-besked').classList.remove('hidden');   
     }
 
 /*------------------------MAIN-CONTENT: BOTTOM MENU-------------------------------------------------*/
