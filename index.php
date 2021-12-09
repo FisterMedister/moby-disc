@@ -16,7 +16,7 @@
                                       
         <div id="main-login">
             <img src="src/img/logo.png" class="logo-login" />
-            <span id="login-besked" class="hidden">Tillykke du er nu oprettet og kan logge ind</span>
+            <span class="centerCon" id="login-besked" class="hidden">Tillykke du er nu oprettet og kan logge ind</span>
             <button class="btn-login" id="btn-goto-main">Log Ind</button>
             <button class="btn-login" id="btn-goto-opret">Opret Bruger</button>
             <p id="or">Eller</p>
