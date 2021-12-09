@@ -62,6 +62,7 @@
 
 //nav bliver i bunden/størrelse
 .bot-nav {
+    z-index: 10000;
     font-family: $font-title;
     position: fixed;
     bottom: 0px;

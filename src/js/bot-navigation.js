@@ -7,12 +7,13 @@ window.onload = function() {
 
 /*------------------------NAVIGER MELLEM LOGIN, OPRET, MAIN-CONTENT-------------------------------------------------*/
     
-    //fjerner login, får en hen til content 
+    //fjerner login-side, får en hen til content 
     document.getElementById('btn-goto-main').onclick=function() {
         //skjuler main-login med klassen hidden
         document.getElementById('main-login').classList.add('hidden');
         //synliggør main-content ved at fjerne klassen hidden
         document.getElementById('main-content').classList.remove('hidden');
+        document.getElementById('login-side').classList.add('hidden');
     }
     //fjerner login, får en hen til opret
     document.getElementById('btn-goto-opret').onclick=function() {
@@ -32,6 +33,13 @@ window.onload = function() {
         document.getElementById('login-besked').classList.remove('hidden');   
     }
 
+    //får en fra main-login og hen til login-side
+     document.getElementById('log-ind').onclick=function() {
+        document.getElementById('main-login').classList.add('hidden');
+        document.getElementById('login-side').classList.remove('hidden');
+    }
+    
+   
 /*------------------------MAIN-CONTENT: BOTTOM MENU-------------------------------------------------*/
 
     //finder element(knap-home) via dets ID, og kører funktion setActiv og getMenuContent

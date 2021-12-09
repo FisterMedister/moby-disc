@@ -12,33 +12,42 @@
 <body>
     <div class="global-wrapper">
 
-<!-----------------------------LOGIN ----------------------------------------->
+<!-----------------------------LOGIN FORSIDE ----------------------------------------->
                                       
         <div id="main-login">
             <img src="src/img/logo.png" class="logo-login" />
             <span  id="login-besked" class="centerCon hidden">Tillykke du er nu oprettet og kan logge ind</span>
-            <button class="btn-login" id="btn-goto-main">Log Ind</button>
+            <button class="btn-login" id="log-ind" >Log Ind</button>
             <button class="btn-login" id="btn-goto-opret">Opret Bruger</button>
             <p id="or">Eller</p>
             <button class="btn-loginwith-apple"><img src="src/img/apple-16.png"/>Sign up with apple</button>
             <button class="btn-loginwith-google"><img src="src/img/google-16.png" />Sign up with google</button>
         </div>
+<!-----------------------------LOGIN SIDE ----------------------------------------->
+        <div class="hidden" id="login-side">
+            <div class="userlogin-container">
+                <img src="src/img/logo.png" class="logo-login" />
+                <input type="text" placeholder="Brugernavn*" class="opret-input" />
+                <input type="password" placeholder="Adgangskode*" class="opret-input" />
+                <button id="btn-goto-main" value="submit" class="btn-login">Login</button>
+            </div>
+        </div>
 
 <!-----------------------------OPRET ----------------------------------------->
                   
         <div id="main-opret" class="hidden">
-        <img src="src/img/Logo.png" class="logo-login" alt="Logo">
-    <h1 class="h1-signup">Velkommen til Moby Disc</h1>
-    <form  method="POST" action="test-data.php" class="signup-wrapper">
-        <p class="p-signup">Indtast venligst dine oplysninger. Felter markeret med * skal udfyldes</p>
-        <input type="text" name="fornavn" placeholder="Fornavn*" class="opret-input" required />
-        <input type="text" name="efternavn" placeholder="Efternavn*" class="opret-input" />
-        <input type="email" name="email" placeholder="Email*" class="opret-input" />
-        <input type="text" name="gadenavn" placeholder="Gadenavn*" class="opret-input" />
-        <input type="text" name="husnr" placeholder="Hus nr.*" class="opret-input" />
-        <!--<input type="text" name="postnummer" placeholder="Postnummer*" class="opret-input" />-->
-        <input type="password" name="adgangskode" placeholder="Adgangskode*" class="opret-input" />
-        <input class="btn-login" id="btn-opret" type="submit" name="submit" value="Opret"/>
+            <img src="src/img/Logo.png" class="logo-login" alt="Logo">
+            <h1 class="h1-signup">Velkommen til Moby Disc</h1>
+        <form  method="POST" action="test-data.php" class="signup-wrapper">
+            <p class="p-signup">Indtast venligst dine oplysninger. Felter markeret med * skal udfyldes</p>
+            <input type="text" name="fornavn" placeholder="Fornavn*" class="opret-input" required />
+            <input type="text" name="efternavn" placeholder="Efternavn*" class="opret-input" />
+            <input type="email" name="email" placeholder="Email*" class="opret-input" />
+            <input type="text" name="gadenavn" placeholder="Gadenavn*" class="opret-input" />
+            <input type="text" name="husnr" placeholder="Hus nr.*" class="opret-input" />
+            <!--<input type="text" name="postnummer" placeholder="Postnummer*" class="opret-input" />-->
+            <input type="password" name="adgangskode" placeholder="Adgangskode*" class="opret-input" />
+            <input class="btn-login" id="btn-opret" type="submit" name="submit" value="Opret"/>
     </form>
     <button class="btn-login" id="btn-goto-login">Log Ind</button>
         </div>
@@ -142,7 +151,7 @@
                         </p>
                         <div class="bot-menu-spacer">
                             <!--Empty space-->   
-                            &nbsp
+                            &nbsp;
                         </div>
                     </div>
                         <div class="item-container">
@@ -159,7 +168,7 @@
                         </div>
                         <div class="bot-menu-spacer">
                             <!--Empty space-->   
-                            &nbsp
+                            &nbsp;
                         </div>
                     </div>  
                 </div>
@@ -282,7 +291,7 @@
                         <div id="rega" class="grid-item"><p>Reggae</p></div>
                     
                     
-                    <!-- evt javascript så man kan trykke på flere genrer så den markerer de farvede - afventer -->
+                   
                     
                     
                     </div>
@@ -292,11 +301,39 @@
 <!-----------------------------MAIN CONTENT: PROFILE ----------------------------------------->
                                            
             <div id="content-profile" class="hidden">
-                PROFILE
+            <img src="https://via.placeholder.com/100" class="profile-img" />
+
+                        <div class="reward-title">
+                            <img src="" alt=""> </div>
+
+                        <div class="progress-grid">
+                                <div class="grid-star1"></div>
+                                <div class="grid-star2"></div>
+                                <div class="grid-star3"></div>
+                                <div class="grid-star4"></div>
+                                <div class="grid-star5"></div>
+                                <div class="grid-star6"></div>
+                                <div class="grid-progress"></div>
+                                <div class="fill"></div>
+                        </div>
+
+                        <div class="grid-profile">
+                            <div class="samling">
+                                <h2>Din samling</h2>
+                                <h3>Her kan du se din køb. Du kan optjene point ved at købe eller anbefale plader</h3>
+                            </div>
+                            <div class="profile-anbefalet">
+                                <h2>Anbefalet</h2>
+                                <div class="anbefal-vinyl"></div>
+                                <div class="anbefal-vinyl"></div>
+                                <div class="anbefal-vinyl"></div>
+                            </div>
+                        </div>
+                    
             </div>
             <div class="bot-menu-spacer">
                 <!--Empty space-->   
-                &nbsp
+                &nbsp;
             </div>
 
 <!-----------------------------MAIN CONTENT: BOTTOM NAVIGATION ----------------------------------------->
@@ -305,13 +342,13 @@
                 <nav class="bot-nav">
                     <ul class="bot-menu-list">
                         <li id="btn-home" class="bot-list-item bot-list-item-active">
-                            <img class="bot-list-item-img" src="src/img/placeholder.svg">
+                            <img class="bot-list-item-img" src="src/img/Icon_home.svg">
                         </li>
                         <li id="btn-shop" class="bot-list-item-text">
                             SHOP
                         </li>
                         <li id="btn-profile" class="bot-list-item">
-                            <img class="bot-list-item-img" src="src/img/placeholder.svg">
+                            <img class="bot-list-item-img" src="src/img/user_profile_icon.svg">
                         </li>
                     </ul>
                 </nav>
