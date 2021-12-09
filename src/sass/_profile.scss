@@ -21,14 +21,16 @@
 .grid-star4 {grid-area: star4;}
 .grid-star5 {grid-area: star5;}
 .grid-star6 {grid-area: star6;}
-.grid-progress {grid-area: progres;}
+.grid-progress {grid-area: progress;}
 
 .progress-grid {
     display: grid;
     grid-gap: 10px;
+    margin-left: 30px;
+    margin-top: 2em;
     grid-template-areas:
-    'star1 star2 star3 star4 star5 star6'
-    'progres';
+    'star1 star2 star3 star4 star5 star6 star6'
+    'progress progress progress progress progress progress progress';
 
     padding: 10px;
 
@@ -37,9 +39,76 @@
         height: 20px;
         width: 27px;
         background-color: yellow;
+        margin-left: 3.5px;
+        border: 1px solid lime;
     }
 
     .grid-progress {
+        width: 90%;
+        height: 15px;
+        border: 2px solid blue;
 
+        .fill {
+            width: 20%;
+            height: 12px;
+            background-color: deeppink;
+        }
     }
+}
+
+.grid-profile {
+    width: 100%;
+    height: 120vh;
+    background-color: green;
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: auto auto;
+
+    .samling {
+        height: 120vh;
+        width: 100%;
+        border-right: 1px solid black;
+
+        h2 {
+            text-align: center;
+            color: #FFF;
+            font-family: $font-title;
+        }
+
+        h3 {
+            text-align: center;
+            color: #FFF;
+            font-family: $font-title;
+            font-size: 18px;
+        }
+    }
+
+    .profile-anbefalet {
+        height: 120vh;
+        width: 100%;
+        border-left: 1px solid black;
+
+        h2 {
+            text-align: center;
+            color: #FFF;
+            font-family: $font-title;
+        }
+    
+        h3 {
+            text-align: center;
+            color: #FFF;
+            font-family: $font-title;
+            font-size: 18px;
+        }
+        
+        .anbefal-vinyl {
+            width: 180px;
+            height: 180px;
+            background-color: red;
+            margin-right: 10px;
+            margin-top: 1em;
+            margin-left: 10px;
+        }
+    }
+
 }
