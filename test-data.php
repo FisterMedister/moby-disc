@@ -1,5 +1,7 @@
 <?php
 
+include 'conn.php';
+
     if(isset($_POST['fornavn']))
     {
         $fornavn = $_POST['fornavn'];
@@ -12,21 +14,6 @@
        
         //redirect
         header("Location:http://localhost/moby-disc/");
-
-        //database details. You have created these details in the third step. Use your own.
-        $server="localhost";
-        $user="root";
-        $pw="";
-        $db="moby_disc_records";
-
-        // Create connection
-          $conn = new mysqli($server, $user, $pw, $db);
-          // Check connection
-          if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-          }
-          echo "Connected successfully";
-
 
 
         //This below line is a code to Send form entries to database

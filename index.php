@@ -27,8 +27,8 @@
         <div class="hidden" id="login-side">
             <div class="userlogin-container">
                 <img src="src/img/logo.png" class="logo-login" />
-                <input type="text" placeholder="Brugernavn*" class="opret-input" />
-                <input type="password" placeholder="Adgangskode*" class="opret-input" />
+                <input id="login-mail" type="text" class="opret-input" />
+                <input id="login-pw" type="password" class="opret-input" />
                 <button id="btn-goto-main" value="submit" class="btn-login">Login</button>
             </div>
         </div>
@@ -120,34 +120,8 @@
                         <button class="minus-btn" onclick="minus()">-</button>
                         <input class="counter" id="cart" placeholder="0"/>
                         <button class="plus-btn" onclick="plus()">+</button>
-                        <p class="Track-list">
-                            <b>Track list</b>
-                            <br />
-                            1 Sunday Morning 2:56
-                            <br />
-                            2 I'm Waiting For The Man 4:39
-                            <br />
-                            3 Femme Fatale 2:38
-                            <br />
-                            4 Venus In Furs 5:12
-                            <br />
-                            5 Run Run Run 4:22
-                            <br />
-                            1 Sunday Morning 2:56
-                            <br />
-                            2 I'm Waiting For The Man 4:39
-                            <br />
-                            3 Femme Fatale 2:38
-                            <br />
-                            4 Venus In Furs 5:12
-                            <br />
-                            5 Run Run Run 4:22
-                            <br />
-                            3 Femme Fatale 2:38
-                            <br />
-                            4 Venus In Furs 5:12
-                            <br />
-                            5 Run Run Run 4:22
+                        <p id="trackList" class="Track-list">
+                            
                         </p>
                         <div class="bot-menu-spacer">
                             <!--Empty space-->   

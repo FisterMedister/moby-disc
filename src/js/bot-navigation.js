@@ -9,11 +9,37 @@ window.onload = function() {
     
     //fjerner login-side, får en hen til content 
     document.getElementById('btn-goto-main').onclick=function() {
-        //skjuler main-login med klassen hidden
-        document.getElementById('main-login').classList.add('hidden');
-        //synliggør main-content ved at fjerne klassen hidden
-        document.getElementById('main-content').classList.remove('hidden');
-        document.getElementById('login-side').classList.add('hidden');
+        //det her virker ikke
+        /*
+        console.log(document.getElementById('login-mail').value);
+        console.log(document.getElementById('login-pw').value);
+
+        var loginMail = document.getElementById('login-mail').value;
+        var loginPW = document.getElementById('login-pw').value;
+        
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function() {
+            //this.responseText er en string der indeholder alt det echo vi har fra PHP
+            //var loginID = this.responseText;
+            //console.log('vi forventer'+this.responseText);
+            var login = "tempSucces";
+            if(login == "tempSucces") {
+            */
+                //skjuler main-login med klassen hidden
+                document.getElementById('main-login').classList.add('hidden');
+                //synliggør main-content ved at fjerne klassen hidden
+                document.getElementById('main-content').classList.remove('hidden');
+                document.getElementById('login-side').classList.add('hidden');
+            /*
+            }
+            else {
+                console.log('feeeehl');
+            }    
+        }
+        //onload bliver først kørt, når vi har loadet vores PHP
+        xhttp.open("GET", "login.php?loginMail="+loginMail+"&loginPW="+loginPW); //parameter kan fjernes
+        xhttp.send();
+        */
     }
     //fjerner login, får en hen til opret
     document.getElementById('btn-goto-opret').onclick=function() {
@@ -34,7 +60,7 @@ window.onload = function() {
     }
 
     //får en fra main-login og hen til login-side
-     document.getElementById('log-ind').onclick=function() {
+    document.getElementById('log-ind').onclick=function() {
         document.getElementById('main-login').classList.add('hidden');
         document.getElementById('login-side').classList.remove('hidden');
     }
@@ -145,59 +171,65 @@ window.onload = function() {
     window.onscroll = function() {stickyTopMenu()};
 }
 
-//denne funktion generere og indsætter dummy data, så der kan scrolles når der trykkes på anbefalinger
+//denne funktion henter vores record data for alle records
 function populateAnbefalinger() {
-
-    //dummy data - her kommer vi til at hente data fra databasen i stedet for 
-   
-    records = [
-        ['src/img/placeholder.svg','Kunstner','Titel','Genre','Pris'],
-        ['src/img/placeholder.svg','Liv Krogshede','Lad os Skændes','Pop','20000kr'],
-        ['src/img/placeholder.svg','ABBA','Voyage','Pop','199kr'],
-        ['src/img/placeholder.svg','Amy Winehouse','Back to Black','Jazz','155kr']
-    ];
-
-    //finder en div via ID (content-shop-anbefalinger)
-    divAnbefalinger = document.getElementById('content-shop-anbefalinger');
-    //rydder alt indhold i div (content-shop-anbefalinger)
-    divAnbefalinger.innerHTML = "";
-    
-    //opretter en ny variable til HTML indhold - e.g. returned record set from DB
-    anbefalingerContent = ""; 
-
-    //i er 0, så længe i er mindre end længden på arrayet (records), så læg en til
-    for(i=0; i< records.length; i++) {
-        //opbygger html indhold basseret på dummy data array
-        anbefalingerContent += 
-            '<div class="centerCon">' +
-            '<input onclick="viewRecord('+i+')" class="medium" type="image" src="'+records[i][0]+'" />' +
-                '<span class="titelRec"><h4>'+records[i][1]+' - '+records[i][2]+'<h4></span>'+
-                '<span class="titelGenre"><h4>Genre: '+records[i][3]+'</h4></span>'+
-                '<button onclick="addRecord('+i+')" class="buyRec">' +
-                    '<span class="priceTag">Køb: '+records[i][4]+'</span>' +
-                    '<img class="small" src="src/img/placeholder.svg">' + 
-                '</button>' +
-            '</div>';
+    //denne konstant opretter et objekt af XMLHttpRequest typen
+    const xhttp = new XMLHttpRequest();
+    //bliver først kørt efter vi har fået respons fra getallrecords.php
+    xhttp.onload = function() {
+        //this.responseText er en string der indeholder alt det echo vi har fra PHP
+        //finder en div via ID (content-shop-anbefalinger) og indsætter this.responseText
+        divAnbefalinger = document.getElementById('content-shop-anbefalinger').innerHTML = this.responseText;;
     }
-
-    //indsætter indholdet af variablen (anbefalingerContent) i div (content-shop-anbefalinger)
-    divAnbefalinger.innerHTML += anbefalingerContent;
+    //onload bliver først kørt, når vi har loadet vores PHP
+    //GET request er en måde at kontakte en server på gennem url
+    xhttp.open("GET", "getallrecords.php");
+    xhttp.send();
 }
 
 function addRecord(albumID) {
     console.log(albumID);
 }
 
-
+//når getallrecords.php indsætter html indsætter den også et onclick event der kalder denne funktion med albumID som parameter
 function viewRecord(albumID) {
     console.log(albumID);
     //viser content fra Mere om Pladen
     getTopMenuContent("content-shop-anbefalinger-viewRecord");
-    //henter data fra array og sætter ind på plads
-    document.getElementById("kunstnerTitel").innerHTML=records[albumID][1]+ " " + records[albumID][2];
-    document.getElementById("addGenre").innerHTML="Genre: " + records[albumID][3];
-    document.getElementById("addImg").innerHTML='<img class="medium" src="' + records[albumID][0] +'">';
-    document.getElementById("addPris").innerHTML="Pris: " + records[albumID][4];
+    //indsætter record data
+    addRecordData(albumID);
+    //indsætter tracklistdata
+    addTrackList(albumID);
+}
+
+function addRecordData(albumID){
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+        //this.responseText er en string der indeholder alt det echo vi har fra PHP
+        //var myString = "titelnavn|kustnernavn|genredims|placeholder|800";
+        var myRecord = this.responseText.split("|");
+        console.log(myRecord);
+        //henter data fra array og sætter ind på plads
+        document.getElementById("kunstnerTitel").innerHTML=myRecord[0]+ " " + myRecord[1];
+        document.getElementById("addGenre").innerHTML="Genre: " + myRecord[2];
+        document.getElementById("addImg").innerHTML='<img class="medium" src="' + myRecord[3] +'">';
+        document.getElementById("addPris").innerHTML="Pris: " + myRecord[4];
+    }
+    //onload bliver først kørt, når vi har loadet vores PHP
+    xhttp.open("GET", "getspecificrecord.php?album_id="+albumID);
+    xhttp.send();
+}
+
+function addTrackList(albumID){
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+        //this.responseText er en string der indeholder alt det echo vi har fra PHP
+        console.log(this.responseText);
+        document.getElementById("trackList").innerHTML = this.responseText;
+    }
+    //onload bliver først kørt, når vi har loadet vores PHP
+    xhttp.open("GET", "gettracklist.php?album_id="+albumID);
+    xhttp.send();
 }
 
 /*------------------------MAIN-CONTENT: BOTTOM MENU: SUPPORT FUNKTIONS-------------------------------------------------*/
