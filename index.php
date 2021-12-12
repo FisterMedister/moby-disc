@@ -156,18 +156,18 @@
                         <button>Læg i kurv</button>
                         <div class="bundle-container">
                             <div>
-                                <p>Lorem Ipsum</p>
-                                <img src="" alt="">
+                                <p>ACDC - Back In Black</p>
+                                <img src="src/img/acdc-backinblack.jpg" alt="">
                                 <button class="see-more">Se mere</button>
                             </div>
                             <div>
-                                <p>Lorem Ipsum</p>
-                                <img src="" alt="">
+                                <p>The Doobie Brothers - Liberté</p>
+                                <img src="src/img/thedoobiebrothers.jpg" alt="">
                                 <button class="see-more">Se mere</button>
                             </div>
                             <div>
-                                <p>Lorem Ipsum</p>
-                                <img src="" alt="">
+                                <p>Ahmed Abdul-Malik - Jazz Sahara</p>
+                                <img src="src/img/ahmed-abdul-malik.jpg" alt="">
                                 <button class="see-more">Se mere</button>
                             </div>
                         </div>
@@ -178,18 +178,18 @@
                         <button>Læg i kurv</button>
                         <div class="bundle-container">
                             <div>
-                                <p>Lorem Ipsum</p>
-                                <img src="" alt="">
+                                <p>Bille Ellish - Happier than ever</p>
+                                <img src="src/img/happierthanever.jpg" alt="">
                                 <button class="see-more">Se mere</button>
                             </div>
                             <div>
-                                <p>Lorem Ipsum</p>
-                                <img src="" alt="">
+                                <p>Michael Jackson - Thriller</p>
+                                <img src="src/img/michaeljackson-thriller.jpg" alt="">
                                 <button class="see-more">Se mere</button>
                             </div>
                             <div>
-                                <p>Lorem Ipsum</p>
-                                <img src="" alt="">
+                                <p>Queen - Queen II</p>
+                                <img src="src/img/queen-queenII.jpg" alt="">
                                 <button class="see-more">Se mere</button>
                             </div>
                         </div>
@@ -200,18 +200,18 @@
                         <button>Læg i kurv</button>
                         <div class="bundle-container">
                             <div>
-                                <p>Lorem Ipsum</p>
-                                <img src="" alt="">
+                                <p>Herb Alpert & The Tijuana Brass - Going Places</p>
+                                <img src="src/img/herbalbert-goingplaces.jpg" alt="">
                                 <button class="see-more">Se mere</button>
                             </div>
                             <div>
-                                <p>Lorem Ipsum</p>
-                                <img src="" alt="">
+                                <p>Buggles - Video Killed the Radio Star</p>
+                                <img src="src/img/buggles-videokilled.jpg" alt="">
                                 <button class="see-more">Se mere</button>
                             </div>
                             <div>
-                                <p>Lorem Ipsum</p>
-                                <img src="" alt="">
+                                <p>Eggstone - waiting for the bell</p>
+                                <img src="src/img/eggstone-waitingforthebell.jpg" alt="">
                                 <button class="see-more">Se mere</button>
                             </div>
                         </div>
@@ -222,18 +222,18 @@
                         <button>Læg i kurv</button>
                         <div class="bundle-container">
                             <div>
-                                <p>Lorem Ipsum</p>
-                                <img src="" alt="">
+                                <p>ACDC Highway to Hell</p>
+                                <img src="src/img/acdc-highway-to-hell.jpg" alt="">
                                 <button class="see-more">Se mere</button>
                             </div>
                             <div>
-                                <p>Lorem Ipsum</p>
-                                <img src="" alt="">
+                                <p>The Rolling Stones - Paint It, Black</p>
+                                <img src="src/img/therollingstones-paintitblack.jpg" alt="">
                                 <button class="see-more">Se mere</button>
                             </div>
                             <div>
-                                <p>Lorem Ipsum</p>
-                                <img src="" alt="">
+                                <p>Dizzy Mizz Lizzy</p>
+                                <img src="src/img/dizzymizzylizzy.jpg" alt="">
                                 <button class="see-more">Se mere</button>
                             </div>
                         </div>

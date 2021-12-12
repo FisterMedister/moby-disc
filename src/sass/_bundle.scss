@@ -13,7 +13,7 @@
 
 .bundle1 {
     width: 100%;
-    min-height: 40vh;
+    min-height: 45vh;
     background-color: #FF8552;
     
     h2 {
@@ -49,7 +49,7 @@
             width: 120px;
             height: 220px;
             //background-color: #FFF;
-            border: 1px solid black;
+            //border: 1px solid black;
 
             img {
                 width: 120px;
@@ -61,6 +61,8 @@
             p {
                 margin: 0;
                 padding: 0;
+                font-family: $font-text;
+                text-align: center;
             }
             .see-more {
                 margin: 0;
@@ -74,7 +76,7 @@
 
 .bundle2 {
     width: 100%;
-    min-height: 40vh;
+    min-height: 45vh;
     background-color: #272B34;
 
     h2 {
@@ -110,7 +112,7 @@
             width: 120px;
             height: 220px;
             //background-color: #FFF;
-            border: 1px solid black;
+            //border: 1px solid black;
 
             img {
                 width: 120px;
@@ -122,6 +124,9 @@
             p {
                 margin: 0;
                 padding: 0;
+                font-family: $font-text;
+                text-align: center;
+                color: white;
             }
             .see-more {
                 margin: 0;
@@ -135,7 +140,7 @@
 
 .bundle3 {
     width: 100%;
-    min-height: 40vh;
+    min-height: 45vh;
     background-color: #309C8E;
 
     h2 {
@@ -171,7 +176,7 @@
             width: 120px;
             height: 220px;
             //background-color: #FFF;
-            border: 1px solid black;
+            //border: 1px solid black;
 
             img {
                 width: 120px;
@@ -183,6 +188,9 @@
             p {
                 margin: 0;
                 padding: 0;
+                font-family: $font-text;
+                text-align: center;
+                color: white;
             }
             .see-more {
                 margin: 0;
@@ -196,7 +204,7 @@
 
 .bundle4 {
     width: 100%;
-    min-height: 40vh;
+    min-height: 45vh;
     background-color: #FFED6A;
 
     h2 {
@@ -232,7 +240,7 @@
             width: 120px;
             height: 220px;
             //background-color: #FFF;
-            border: 1px solid #000;
+            //border: 1px solid #000;
 
             img {
                 width: 120px;
@@ -244,6 +252,8 @@
             p {
                 margin: 0;
                 padding: 0;
+                font-family: $font-text;
+                text-align: center;
                 color: #000;
             }
 
