@@ -1,6 +1,6 @@
 
 <?php
-  $album_id = $_REQUEST["album_id"]; //parameter kan fjernes
+  $album_id = $_REQUEST["album_id"]; 
 
   include 'conn.php';
 

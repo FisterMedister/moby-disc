@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/css/style.css">
     <title>Moby Disc - Home</title>
-    <script src="src/js/bot-navigation.js"></script>
+    <script src="src/js/core.js"></script>
 </head>
 
 <body>
@@ -15,18 +15,18 @@
 <!-----------------------------LOGIN FORSIDE ----------------------------------------->
                                       
         <div id="main-login">
-            <img src="src/img/logo.png" class="logo-login" />
+            <img alt="mobydisclogo" src="src/img/logo.png" class="logo-login" />
             <span  id="login-besked" class="centerCon hidden">Tillykke du er nu oprettet og kan logge ind</span>
             <button class="btn-login" id="log-ind" >Log Ind</button>
             <button class="btn-login" id="btn-goto-opret">Opret Bruger</button>
             <p id="or">Eller</p>
-            <button class="btn-loginwith-apple"><img src="src/img/apple-16.png"/>Sign up with apple</button>
-            <button class="btn-loginwith-google"><img src="src/img/google-16.png" />Sign up with google</button>
+            <button class="btn-loginwith-apple"><img alt="apple logo" src="src/img/apple-16.png"/>Sign up with apple</button>
+            <button class="btn-loginwith-google"><img alt="google logo" src="src/img/google-16.png" />Sign up with google</button>
         </div>
 <!-----------------------------LOGIN SIDE ----------------------------------------->
         <div class="hidden" id="login-side">
             <div class="userlogin-container">
-                <img src="src/img/logo.png" class="logo-login" />
+                <img alt="mobydisclogo" src="src/img/logo.png" class="logo-login" />
                 <input id="login-mail" type="text" class="opret-input" />
                 <input id="login-pw" type="password" class="opret-input" />
                 <button id="btn-goto-main" value="submit" class="btn-login">Login</button>
@@ -36,9 +36,9 @@
 <!-----------------------------OPRET ----------------------------------------->
                   
         <div id="main-opret" class="hidden">
-            <img src="src/img/Logo.png" class="logo-login" alt="Logo">
+            <img alt="mobydisclogo" src="src/img/Logo.png" class="logo-login">
             <h1 class="h1-signup">Velkommen til Moby Disc</h1>
-        <form  method="POST" action="test-data.php" class="signup-wrapper">
+        <form  method="POST" action="opret.php" class="signup-wrapper">
             <p class="p-signup">Indtast venligst dine oplysninger. Felter markeret med * skal udfyldes</p>
             <input type="text" name="fornavn" placeholder="Fornavn*" class="opret-input" required />
             <input type="text" name="efternavn" placeholder="Efternavn*" class="opret-input" />
@@ -56,7 +56,7 @@
                     
         <div id="main-content" class="hidden">
             <header>
-                <img src="src/img/Logo.png" class="logo-login" />
+                <img alt="mobydisclogo" src="src/img/Logo.png" class="logo-login" />
                 
             </header>
 
@@ -108,11 +108,11 @@
 <!-----------------------------MAIN CONTENT: SHOP: ANBEFALINGER: MERE OM PLADEN ----------------------------------------->
                 <div class="hidden" id="content-shop-anbefalinger-viewRecord">
                     <h1 id="kunstnerTitel" class="item-title">Album titel og kunstner</h1>
-                    <div id="addImg">
-                    <img src="src/img/itemplaceholder.png" class="item-cover" />
+                    <div role="img" id="addImg">
+                    <img alt="placeholder" src="src/img/itemplaceholder.png" class="item-cover" />
                 </div>
                     <div class="thumps-container">
-                        <img src="src/img/thumpsplaceholder.png" onclick=toogle(this) class="thumps" />
+                        <img alt="placeholder" src="src/img/thumpsplaceholder.png" onclick=toogle(this) class="thumps" />
                     </div>
                 <div class="item-grid-container"> 
                     <div class="item-container">
@@ -157,17 +157,17 @@
                         <div class="bundle-container">
                             <div>
                                 <p>ACDC - Back In Black</p>
-                                <img src="src/img/acdc-backinblack.jpg" alt="">
+                                <img src="src/img/acdc-backinblack.jpg" alt="backinblack">
                                 <button class="see-more">Se mere</button>
                             </div>
                             <div>
                                 <p>The Doobie Brothers - Liberté</p>
-                                <img src="src/img/thedoobiebrothers.jpg" alt="">
+                                <img src="src/img/thedoobiebrothers.jpg" alt="doobiebrothers">
                                 <button class="see-more">Se mere</button>
                             </div>
                             <div>
                                 <p>Ahmed Abdul-Malik - Jazz Sahara</p>
-                                <img src="src/img/ahmed-abdul-malik.jpg" alt="">
+                                <img src="src/img/ahmed-abdul-malik.jpg" alt="ahmedabdulmalik">
                                 <button class="see-more">Se mere</button>
                             </div>
                         </div>
@@ -179,17 +179,17 @@
                         <div class="bundle-container">
                             <div>
                                 <p>Bille Ellish - Happier than ever</p>
-                                <img src="src/img/happierthanever.jpg" alt="">
+                                <img src="src/img/happierthanever.jpg" alt="happierthanever">
                                 <button class="see-more">Se mere</button>
                             </div>
                             <div>
                                 <p>Michael Jackson - Thriller</p>
-                                <img src="src/img/michaeljackson-thriller.jpg" alt="">
+                                <img src="src/img/michaeljackson-thriller.jpg" alt="thriller">
                                 <button class="see-more">Se mere</button>
                             </div>
                             <div>
                                 <p>Queen - Queen II</p>
-                                <img src="src/img/queen-queenII.jpg" alt="">
+                                <img src="src/img/queen-queenII.jpg" alt="queen">
                                 <button class="see-more">Se mere</button>
                             </div>
                         </div>
@@ -201,17 +201,17 @@
                         <div class="bundle-container">
                             <div>
                                 <p>Herb Alpert & The Tijuana Brass - Going Places</p>
-                                <img src="src/img/herbalbert-goingplaces.jpg" alt="">
+                                <img src="src/img/herbalbert-goingplaces.jpg" alt="goingplaces">
                                 <button class="see-more">Se mere</button>
                             </div>
                             <div>
                                 <p>Buggles - Video Killed the Radio Star</p>
-                                <img src="src/img/buggles-videokilled.jpg" alt="">
+                                <img src="src/img/buggles-videokilled.jpg" alt="videokilledtheradiostar">
                                 <button class="see-more">Se mere</button>
                             </div>
                             <div>
                                 <p>Eggstone - waiting for the bell</p>
-                                <img src="src/img/eggstone-waitingforthebell.jpg" alt="">
+                                <img src="src/img/eggstone-waitingforthebell.jpg" alt="waitingforthebell">
                                 <button class="see-more">Se mere</button>
                             </div>
                         </div>
@@ -223,17 +223,17 @@
                         <div class="bundle-container">
                             <div>
                                 <p>ACDC Highway to Hell</p>
-                                <img src="src/img/acdc-highway-to-hell.jpg" alt="">
+                                <img src="src/img/acdc-highway-to-hell.jpg" alt="highwaytohell">
                                 <button class="see-more">Se mere</button>
                             </div>
                             <div>
                                 <p>The Rolling Stones - Paint It, Black</p>
-                                <img src="src/img/therollingstones-paintitblack.jpg" alt="">
+                                <img src="src/img/therollingstones-paintitblack.jpg" alt="paintitblack">
                                 <button class="see-more">Se mere</button>
                             </div>
                             <div>
                                 <p>Dizzy Mizz Lizzy</p>
-                                <img src="src/img/dizzymizzylizzy.jpg" alt="">
+                                <img src="src/img/dizzymizzylizzy.jpg" alt="dizzymizzylizzy">
                                 <button class="see-more">Se mere</button>
                             </div>
                         </div>
@@ -275,10 +275,10 @@
 <!-----------------------------MAIN CONTENT: PROFILE ----------------------------------------->
                                            
             <div id="content-profile" class="hidden">
-            <img src="https://via.placeholder.com/100" class="profile-img" />
+            <img src="https://via.placeholder.com/100" class="profile-img" alt="placeholder" />
 
                         <div class="reward-title">
-                            <img src="" alt=""> </div>
+                            <img src="" alt="placeholder"> </div>
 
                         <div class="progress-grid">
                                 <div class="grid-star1"></div>
@@ -316,13 +316,13 @@
                 <nav class="bot-nav">
                     <ul class="bot-menu-list">
                         <li id="btn-home" class="bot-list-item bot-list-item-active">
-                            <img class="bot-list-item-img" src="src/img/Icon_home.svg">
+                            <img alt="iconhome" class="bot-list-item-img" src="src/img/Icon_home.svg">
                         </li>
                         <li id="btn-shop" class="bot-list-item-text">
                             SHOP
                         </li>
                         <li id="btn-profile" class="bot-list-item">
-                            <img class="bot-list-item-img" src="src/img/user_profile_icon.svg">
+                            <img alt="iconuser" class="bot-list-item-img" src="src/img/user_profile_icon.svg">
                         </li>
                     </ul>
                 </nav>
