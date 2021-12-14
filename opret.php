@@ -13,7 +13,7 @@ include 'conn.php';
         //$postnummer = $_POST['postnummer'];
        
         //redirect
-        header("Location:http://localhost/moby-disc/");
+        header("Location:http://www.livse.dk/moby-disc/");
 
 
         //This below line is a code to Send form entries to database

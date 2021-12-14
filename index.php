@@ -15,7 +15,7 @@
 <!-----------------------------LOGIN FORSIDE ----------------------------------------->
                                       
         <div id="main-login">
-            <img alt="mobydisclogo" src="src/img/logo.png" class="logo-login" />
+            <img alt="mobydisclogo" src="src/img/Logo.png" class="logo-login" />
             <span  id="login-besked" class="centerCon hidden">Tillykke du er nu oprettet og kan logge ind</span>
             <button class="btn-login" id="log-ind" >Log Ind</button>
             <button class="btn-login" id="btn-goto-opret">Opret Bruger</button>
@@ -26,7 +26,7 @@
 <!-----------------------------LOGIN SIDE ----------------------------------------->
         <div class="hidden" id="login-side">
             <div class="userlogin-container">
-                <img alt="mobydisclogo" src="src/img/logo.png" class="logo-login" />
+                <img alt="mobydisclogo" src="src/img/Logo.png" class="logo-login" />
                 <input id="login-mail" type="text" class="opret-input" />
                 <input id="login-pw" type="password" class="opret-input" />
                 <button id="btn-goto-main" value="submit" class="btn-login">Login</button>
