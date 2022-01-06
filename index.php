@@ -27,8 +27,8 @@
         <div class="hidden" id="login-side">
             <div class="userlogin-container">
                 <img alt="mobydisclogo" src="src/img/Logo.png" class="logo-login" />
-                <input id="login-mail" type="text" class="opret-input" />
-                <input id="login-pw" type="password" class="opret-input" />
+                <input id="login-mail" type="text" class="opret-input" placeholder="Email" />
+                <input id="login-pw" type="password" class="opret-input" placeholder="Password" />
                 <button id="btn-goto-main" value="submit" class="btn-login">Login</button>
             </div>
         </div>
